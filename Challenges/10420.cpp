@@ -8,13 +8,15 @@ using namespace std;
 int main()
 {
 	int numberImputs;
-	string country, name_temp;
+	char name_temp[75];
+	string country;
 	map<string,int> conquests;
 
 	cin >> numberImputs;
 	for (int i = 0; i < numberImputs; i++)
 	{
-		cin >> country >> name_temp >> name_temp;
+		cin >> country;
+		cin.getline(name_temp, 75);
 		pair<map<string,int>::iterator, bool> existed =  conquests.insert(pair<string,int>(country,1));
 
 		if(existed.second == false)
@@ -27,9 +29,6 @@ int main()
 	{
 		cout << it->first << ' ' << it->second << endl;
 	}
-
-	cin.get();
-	cin.get();
 
 	return 0;
 }
