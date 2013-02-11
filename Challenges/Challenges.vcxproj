@@ -63,6 +63,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="10420.cpp" />
+    <ClCompile Include="11559.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

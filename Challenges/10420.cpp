@@ -1,11 +1,13 @@
 
+// Accepted 11/2-13
+
 #include <iostream>
 #include <map>
 #include <string>
 
 using namespace std;
 
-int main()
+int main2()
 {
 	int numberImputs;
 	char name_temp[75];
