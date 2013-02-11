@@ -7,7 +7,7 @@
 
 using namespace std;
 
-int main2()
+int main10420()
 {
 	int numberImputs;
 	char name_temp[75];
