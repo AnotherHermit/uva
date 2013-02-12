@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main()
+int main11799()
 {
 	int T, N, C, min_speed;
 
