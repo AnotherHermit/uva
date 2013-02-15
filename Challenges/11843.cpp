@@ -1,32 +1,66 @@
 #include <iostream>
 #include <math.h>
 
+// Ta bort innan inlämning
+#include <Windows.h>
+#include "mmsystem.h"
+
 using namespace std;
 
-int main11843()
+int main()
 {
+	// Ta bort innan inlämning
+	DWORD startD,endD;
+	startD = timeGetTime();
+	unsigned int end;
+
+
+	short LUT[1000][10] = {0};
 	int N, S, C, X, min_i;
 	double min_d, N_d;
-	cin >> C;
 
-	for (int i = 0; i < C; i++)
+	for (int i = 0; i < 1000; i++)
 	{
-		cin >> N >> S;
+		LUT[i][0] = i + 1;
+	}
 
-		N_d = N;
-		min_d = log(N_d)/log(2.) + 1;
-		min_i = min_d;
-
-		if(S == 1)
+	short pos = 0;
+	for (int i = 0; i < 10; i++)
+	{
+		for (int j = 0;pos < 1000 && j < pow(2,i); pos++, j++)
 		{
-			X = N;
+			LUT[pos][9] = i + 1;
 		}
-		else if(S == 2)
+	}
+
+	pos = 0;
+	for (int i = 1; i < 46; i++)
+	{
+		for (int j = 0;pos < 1000 && j < i; j++, pos++)
 		{
-
+			LUT[pos][1] = i;
+			if(i == LUT[pos][9])
+			{
+				for (int k = 2; k < 9; k++)
+				{
+					LUT[pos][k] = i;
+				}
+			}
 		}
+	}
 
-		cout << X << endl;
+
+
+
+	// Ta bort innan inlämning
+	endD = timeGetTime();
+	end = endD - startD;
+	cerr << end << endl;
+
+
+	while(cin >> N >> S)
+	{
+		cout << LUT[N-1][S-1] << endl;
 	}
 
 	return 0;
