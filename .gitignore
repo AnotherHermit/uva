@@ -1,0 +1,4 @@
+# git ignore file
+Challenges/Debug*/
+Challenges/Challenges.opensdf
+Challenges/Challenges.vcxproj.user
